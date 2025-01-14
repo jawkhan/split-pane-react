@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "prepare": "npm run build",
     "build": "gulp --gulpfile ./build/gulpfile.js"
   },
   "keywords": [
