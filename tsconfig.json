@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
+    "module": "ESNext",
+    "target": "ESNext",
     "lib": ["es5", "es6", "es7", "es2017", "dom", "ESNext"],
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "baseUrl": "./",
     "strict": true,
@@ -15,7 +15,6 @@
     "noImplicitAny": false,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "declaration": true,
@@ -26,13 +25,10 @@
     "downlevelIteration": true,
     "typeRoots": ["node", "node_modules/@types", "src/typings"],
     "outDir": "esm",
-    "module": "es6",
-    "target": "es6",
-    "declaration": true,
     "preserveConstEnums": true,
-    "sourceMap": false,
-    "rootDirs": ["src"]
+    "rootDirs": ["src"],
+    "types": ["react", "node"]
   },
-  "include": ["src/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "src/__tests__/*"]
 }
