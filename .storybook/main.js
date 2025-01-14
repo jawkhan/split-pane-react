@@ -2,21 +2,30 @@ module.exports = {
   "stories": [
     "../stories/*.stories.tsx",
   ],
+
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@chromatic-com/storybook"
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-vite"
+
+  "framework": {
+    name: "@storybook/react-vite",
+    options: {}
   },
-  "features": {
-    "storyStoreV7": true
-  },
+
+  "features": {},
+
   async viteFinal(config) {
     return Object.assign({}, config, {
       base: '/split-pane-react/'
     });
   },
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript"
+  }
 }
